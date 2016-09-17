@@ -75,7 +75,7 @@ gulp.task("mainscripts-dev", ["babel"], function(){
 });
 
 gulp.task("mainscripts-dist", ["babel"], function(){
-	return gulp.src(["tmp/kanatab.js", "tmp/background.js"]).
+	return gulp.src(["tmp/kanatab.js", "tmp/background.js", "tmp/options.js", "tmp/theme.js"]).
 	pipe(browserify({})).
 	pipe(uglify()).
 	pipe(gulp.dest("dist/scripts"));
