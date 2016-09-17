@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!-- Author: Darren Lester -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kana Tab Options</title>
+
+	<link rel="stylesheet" type="text/css" href="style/options.css" />
+</head>
+<body>
+	<fieldset>
+		<legend>Mode</legend>
+		<label><input type="radio" name="mode" value="flash-card" />Flash cards</label>
+		<label><input type="radio" name="mode" value="reference-tables" />Reference tables</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>Kana</legend>
+		<select id="kana-type">
+			<option value="hiragana">Hiragana</option>
+			<option value="katakana">Katakana</option>
+			<option value="all">All</option>
+		</select>
+		<label><input id="voiced" type="checkbox" />Voiced</label>
+		<label><input id="youon" type="checkbox" />Youon</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>Theme</legend>
+		<select id="theme">
+			<option value="default">Default</option>
+			<option value="custom">Custom</option>
+		</select>
+		<section id="custom-theme-colours">
+			<label><input id="custom-theme-background" type="color" /> Background</label>
+			<label><input id="custom-theme-jap" type="color" /> Japanese</label>
+			<label><input id="custom-theme-eng" type="color" /> English</label>
+			<label><input id="custom-theme-table" type="color" /> Table</label>
+			<label><input id="custom-theme-caption" type="color" /> Titles</label>
+		<section>
+	</fieldset>
+	
+	<button id="save">Save</button>
+	<span id="status"></span>
+
+	<script src="scripts/options.js"></script>
+</body>
+</html>
