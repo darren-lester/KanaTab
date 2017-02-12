@@ -49,6 +49,6 @@ export const hiragana = [
 	new Kana("れ", "re"),
 	new Kana("ろ", "ro"),
 	new Kana("わ", "wa"),
-	new Kana("を", "o"),
+	new Kana("を", "wo"),
 	new Kana("ん", "n")
 ];

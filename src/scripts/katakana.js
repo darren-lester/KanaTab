@@ -49,6 +49,6 @@ export const katakana = [
 	new Kana("レ", "re"),
 	new Kana("ロ", "ro"),
 	new Kana("ワ", "wa"),
-	new Kana("ヲ", "o"),
+	new Kana("ヲ", "wo"),
 	new Kana("ン", "n")
 ];
