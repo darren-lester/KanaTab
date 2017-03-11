@@ -7,7 +7,7 @@ import kanaLists from "./kanalists";
 let kanaList = null;
 let lastKana = "";
 
-function setKanaList({kanaType, voiced, youon}) {
+global.setKanaList = function({kanaType, voiced, youon}) {
 	
 	const hiraganaTypes = [kanaLists.hiragana, kanaLists.hiraganaVoiced, kanaLists.hiraganaYouon, kanaLists.hiraganaVoicedYouon];
 	const katakanaTypes = [kanaLists.katakana, kanaLists.katakanaVoiced, kanaLists.katakanaYouon, kanaLists.katakanaVoicedYouon];
@@ -40,13 +40,7 @@ function setKanaList({kanaType, voiced, youon}) {
 	else {
 		kanaList = listType[0];
 	}
-}
-
-chrome.storage.sync.get({
-	kanaType: defaults.kanaType,
-	voiced: defaults.voiced,
-	youon: defaults.youon
-}, items => setKanaList(items));
+};
 
 //set callback for updating kanaList when changed in options
 chrome.storage.onChanged.addListener(function(){

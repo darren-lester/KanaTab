@@ -54,4 +54,17 @@ chrome.storage.sync.get({
 	voiced: defaults.voiced,
 	youon: defaults.youon,
 	adverts: defaults.adverts
-}, opts => displayContent(opts));
+}, init);
+
+function init(opts){
+
+	const bg = chrome.extension.getBackgroundPage();
+
+	if (!bg.setKanaList) {
+		setTimeout(function(){init(opts)}, 0);
+	}
+	else {
+		bg.setKanaList(opts);
+		displayContent(opts);
+	}
+}
