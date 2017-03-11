@@ -7,3 +7,38 @@
 body {
     margin: 1em 0;
 }
+
+.kana-advert {
+  background-color: #0080FF;
+  color: white;
+  width: 300px;
+  display: flex;
+ position: absolute;
+	left: 1em;
+	bottom: 1em;
+  align-items: center;
+  margin-top: 2em;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  text-decoration: none;
+  }
+
+.kana-advert p {
+  margin-right: 1em; }
+
+.kana-advert:hover {
+  background-color: #0070FF; }
+
+.kana-advert.flashcard {
+	position: absolute;
+	left: 1em;
+	bottom: 1em;
+}
+
+.kana-advert.tables {
+	position: static;
+	margin-top: 4em;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}

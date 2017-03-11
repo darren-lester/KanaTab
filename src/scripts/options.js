@@ -23,13 +23,16 @@ function saveOptions() {
 		caption: document.getElementById("custom-theme-caption").value
 	};
 
+	const adverts = document.getElementById("adverts").checked == 1;
+
 	chrome.storage.sync.set({
 		mode,
 		kanaType,
 		voiced,
 		youon,
 		theme,
-		customTheme
+		customTheme,
+		adverts
 	}, function(){
 		const status = document.getElementById("status");
 		status.textContent = "Options saved";
@@ -47,7 +50,8 @@ function restoreOptions() {
 		voiced: defaults.voiced,
 		youon: defaults.youon,
 		theme: defaults.theme,
-		customTheme: defaults.customTheme
+		customTheme: defaults.customTheme,
+		adverts: defaults.adverts
 	}, function(items){
 		setSelectedMode(items.mode);
 		document.getElementById("kana-type").value = items.kanaType;
@@ -55,6 +59,7 @@ function restoreOptions() {
 		document.getElementById("youon").checked = items.youon;
 		document.getElementById("theme").value = items.theme;
 		setCustomThemeColours(items.customTheme);
+		setAdverts(items.adverts);
 		
 		if(items.theme === "custom") {
 			showCustomThemeOptions(true);	
@@ -111,3 +116,12 @@ document.getElementById("save").addEventListener("click", saveOptions);
 document.getElementById("theme").addEventListener("change", function(e){
 	showCustomThemeOptions(e.target.value === "custom");
 });
+
+function setAdverts(show) {
+	if (show) {
+		document.getElementById("adverts").checked = 1;
+	}
+	else {
+		document.getElementById("adverts").checked = 0;
+	}
+}

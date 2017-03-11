@@ -16,6 +16,12 @@ export function displayContent(opts) {
 		default:
 			console.log("unsupported mode:", opts.mode);
 	}
+	if (opts.adverts) {
+		document.getElementById("kana-advert").style.display = "flex";
+	}
+	else {
+		document.getElementById("kana-advert").style.display = "none";
+	}
 }
 
 function displayFlashCard() {
@@ -25,6 +31,10 @@ function displayFlashCard() {
 	document.getElementById("translation").innerText = kana.english;
 
 	document.getElementById("card").style.display = "block";
+
+	var kanaAdvert = document.getElementById("kana-advert");
+	kanaAdvert.classList.add("flashcard");
+	kanaAdvert.classList.remove("tables");
 }
 
 function displayReferenceTables(opts) {
@@ -84,6 +94,10 @@ function displayReferenceTables(opts) {
 		default:
 			console.log("unrecognised kana type");
 	}
+
+	var kanaAdvert = document.getElementById("kana-advert");
+	kanaAdvert.classList.add("tables");
+	kanaAdvert.classList.remove("flashcard");
 }
 
 function hideFlashCard() {
