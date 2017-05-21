@@ -1,4 +1,4 @@
-#KanaTab
+# KanaTab
 KanaTab is a Google chrome extension that allows you to practice Japanese kana
 in new tabs.
 
