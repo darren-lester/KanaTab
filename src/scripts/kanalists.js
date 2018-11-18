@@ -53,7 +53,7 @@ const isValidKanaType = kanaType => VALID_KANA_TYPES.includes(kanaType);
 export default {
   get: ({ kanaType, voiced, youon }) => {
     if (!isValidKanaType(kanaType)) {
-      throw new TypeError(`Invalid kana type: ${kanaType}`);
+      throw new RangeError(`Invalid kana type: ${kanaType}`);
     }
 
     const characterSet = characterSets[kanaType];

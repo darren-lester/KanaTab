@@ -12,7 +12,7 @@ export function displayContent(opts) {
       displayReferenceTables(opts);
       break;
     default:
-      console.log("unsupported mode:", opts.mode);
+      throw new RangeError(`Invalid mode: ${opts.mode}`);
   }
 }
 
@@ -78,7 +78,7 @@ function displayReferenceTables(opts) {
       displayKatakana();
       break;
     default:
-      console.log("unrecognised kana type");
+      throw new RangeError(`Invalid kana type: ${opts.kanaType}`);
   }
 }
 
