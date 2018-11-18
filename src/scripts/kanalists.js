@@ -9,37 +9,63 @@ import { youonKatakana } from "./youonkatakana";
 import { voicedYouonHiragana } from "./voicedyouonhiragana";
 import { voicedYouonKatakana } from "./voicedyouonkatakana";
 
-const hiraganaKatakana = hiragana.concat(katakana);
+const hiraganaSets = {
+  basic: hiragana,
+  voiced: [...hiragana, ...voicedHiragana],
+  youon: [...hiragana, ...youonHiragana],
+  voicedYouon: [
+    ...hiragana,
+    ...voicedHiragana,
+    ...youonHiragana,
+    ...voicedYouonHiragana
+  ]
+};
 
-const hiraganaVoiced = hiragana.concat(voicedHiragana);
-const katakanaVoiced = katakana.concat(voicedKatakana);
-const hiraganaKatakanaVoiced = hiraganaVoiced.concat(katakanaVoiced);
+const katakanaSets = {
+  basic: katakana,
+  voiced: [...katakana, ...voicedKatakana],
+  youon: [...katakana, ...youonKatakana],
+  voicedYouon: [
+    ...katakana,
+    ...voicedKatakana,
+    ...youonKatakana,
+    ...voicedYouonKatakana
+  ]
+};
 
-const hiraganaYouon = hiragana.concat(youonHiragana);
-const katakanaYouon = katakana.concat(youonKatakana);
-const hiraganaKatakanaYouon = hiraganaYouon.concat(katakanaYouon);
+const allSets = {
+  basic: [...hiraganaSets.basic, ...katakanaSets.basic],
+  voiced: [...hiraganaSets.voiced, ...katakanaSets.voiced],
+  youon: [...hiraganaSets.youon, ...katakanaSets.youon],
+  voicedYouon: [...hiraganaSets.voicedYouon, ...katakanaSets.voicedYouon]
+};
 
-const hiraganaVoicedYouon = hiraganaVoiced
-  .concat(youonHiragana)
-  .concat(voicedYouonHiragana);
-const katakanaVoicedYouon = katakanaVoiced
-  .concat(youonKatakana)
-  .concat(voicedYouonKatakana);
-const hiraganaKatakanaVoicedYouon = hiraganaVoicedYouon.concat(
-  katakanaVoicedYouon
-);
+const characterSets = {
+  hiragana: hiraganaSets,
+  katakana: katakanaSets,
+  all: allSets
+};
+
+const VALID_KANA_TYPES = ["hiragana", "katakana", "all"];
+
+const isValidKanaType = kanaType => VALID_KANA_TYPES.includes(kanaType);
 
 export default {
-  hiragana,
-  katakana,
-  hiraganaKatakana,
-  hiraganaVoiced,
-  katakanaVoiced,
-  hiraganaKatakanaVoiced,
-  hiraganaYouon,
-  katakanaYouon,
-  hiraganaKatakanaYouon,
-  hiraganaVoicedYouon,
-  katakanaVoicedYouon,
-  hiraganaKatakanaVoicedYouon
+  get: ({ kanaType, voiced, youon }) => {
+    if (!isValidKanaType(kanaType)) {
+      throw new TypeError(`Invalid kana type: ${kanaType}`);
+    }
+
+    const characterSet = characterSets[kanaType];
+
+    if (voiced && youon) {
+      return characterSet.voicedYouon;
+    } else if (voiced) {
+      return characterSet.voiced;
+    } else if (youon) {
+      return characterSet.youon;
+    } else {
+      return characterSet.basic;
+    }
+  }
 };
