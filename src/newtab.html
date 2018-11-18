@@ -1,371 +1,516 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" type="text/css" href="style/main.css" />
-		<link id="theme" rel="stylesheet" type="text/css" href="style/themes/default.css" />
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <link
+      id="theme"
+      rel="stylesheet"
+      type="text/css"
+      href="style/themes/default.css"
+    />
+  </head>
 
-	<body>
+  <body>
+    <div class="wrapper">
+      <section id="card">
+        <div id="item" class="jap"></div>
+        <div id="translation" class="eng"></div>
+      </section>
 
-		<div class="wrapper">
+      <section id="reference-tables">
+        <section id="hiragana-tables">
+          <div class="kana-table-wrapper">
+            <table id="hiragana-table" class="kana-table">
+              <caption>
+                Hiragana
+              </caption>
+              <tr>
+                <td><span class="jap">ん</span><span class="eng">n</span></td>
+                <td><span class="jap">わ</span><span class="eng">wa</span></td>
+                <td><span class="jap">ら</span><span class="eng">ra</span></td>
+                <td><span class="jap">や</span><span class="eng">ya</span></td>
+                <td><span class="jap">ま</span><span class="eng">ma</span></td>
+                <td><span class="jap">は</span><span class="eng">ha</span></td>
+                <td><span class="jap">な</span><span class="eng">na</span></td>
+                <td><span class="jap">た</span><span class="eng">ta</span></td>
+                <td><span class="jap">さ</span><span class="eng">sa</span></td>
+                <td><span class="jap">か</span><span class="eng">ka</span></td>
+                <td><span class="jap">あ</span><span class="eng">a</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">り</span><span class="eng">ri</span></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">み</span><span class="eng">mi</span></td>
+                <td><span class="jap">ひ</span><span class="eng">hi</span></td>
+                <td><span class="jap">に</span><span class="eng">ni</span></td>
+                <td><span class="jap">ち</span><span class="eng">chi</span></td>
+                <td><span class="jap">し</span><span class="eng">shi</span></td>
+                <td><span class="jap">き</span><span class="eng">ki</span></td>
+                <td><span class="jap">い</span><span class="eng">i</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">る</span><span class="eng">ru</span></td>
+                <td><span class="jap">ゆ</span><span class="eng">yu</span></td>
+                <td><span class="jap">む</span><span class="eng">mu</span></td>
+                <td><span class="jap">ふ</span><span class="eng">fu</span></td>
+                <td><span class="jap">ぬ</span><span class="eng">nu</span></td>
+                <td><span class="jap">つ</span><span class="eng">tsu</span></td>
+                <td><span class="jap">す</span><span class="eng">su</span></td>
+                <td><span class="jap">く</span><span class="eng">ku</span></td>
+                <td><span class="jap">う</span><span class="eng">u</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">れ</span><span class="eng">re</span></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">め</span><span class="eng">me</span></td>
+                <td><span class="jap">へ</span><span class="eng">he</span></td>
+                <td><span class="jap">ね</span><span class="eng">ne</span></td>
+                <td><span class="jap">て</span><span class="eng">te</span></td>
+                <td><span class="jap">せ</span><span class="eng">se</span></td>
+                <td><span class="jap">け</span><span class="eng">ke</span></td>
+                <td><span class="jap">え</span><span class="eng">e</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td><span class="jap">を</span><span class="eng">wo</span></td>
+                <td><span class="jap">ろ</span><span class="eng">ro</span></td>
+                <td><span class="jap">よ</span><span class="eng">yo</span></td>
+                <td><span class="jap">も</span><span class="eng">mo</span></td>
+                <td><span class="jap">ほ</span><span class="eng">ho</span></td>
+                <td><span class="jap">の</span><span class="eng">no</span></td>
+                <td><span class="jap">と</span><span class="eng">to</span></td>
+                <td><span class="jap">そ</span><span class="eng">so</span></td>
+                <td><span class="jap">こ</span><span class="eng">ko</span></td>
+                <td><span class="jap">お</span><span class="eng">o</span></td>
+              </tr>
+            </table>
+          </div>
 
-		<section id="card">
-			<div id="item" class="jap"></div>
-			<div id="translation" class="eng"></div>
-		</section>
+          <div class="kana-table-wrapper">
+            <table id="voiced-hiragana-table" class="kana-table">
+              <caption>
+                Voiced Hiragana
+              </caption>
+              <tr>
+                <td><span class="jap">ぱ</span><span class="eng">pa</span></td>
+                <td><span class="jap">ば</span><span class="eng">ba</span></td>
+                <td><span class="jap">だ</span><span class="eng">da</span></td>
+                <td><span class="jap">ざ</span><span class="eng">za</span></td>
+                <td><span class="jap">が</span><span class="eng">ga</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">ぴ</span><span class="eng">pi</span></td>
+                <td><span class="jap">び</span><span class="eng">bi</span></td>
+                <td><span class="jap">ぢ</span><span class="eng">ji</span></td>
+                <td><span class="jap">じ</span><span class="eng">ji</span></td>
+                <td><span class="jap">ぎ</span><span class="eng">gi</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">ぷ</span><span class="eng">pu</span></td>
+                <td><span class="jap">ぶ</span><span class="eng">bu</span></td>
+                <td><span class="jap">づ</span><span class="eng">zu</span></td>
+                <td><span class="jap">ず</span><span class="eng">zu</span></td>
+                <td><span class="jap">ぐ</span><span class="eng">gu</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">ぺ</span><span class="eng">pe</span></td>
+                <td><span class="jap">べ</span><span class="eng">be</span></td>
+                <td><span class="jap">で</span><span class="eng">de</span></td>
+                <td><span class="jap">ぜ</span><span class="eng">ze</span></td>
+                <td><span class="jap">げ</span><span class="eng">ge</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">ぽ</span><span class="eng">po</span></td>
+                <td><span class="jap">ぼ</span><span class="eng">bo</span></td>
+                <td><span class="jap">ど</span><span class="eng">do</span></td>
+                <td><span class="jap">ぞ</span><span class="eng">zo</span></td>
+                <td><span class="jap">ご</span><span class="eng">go</span></td>
+              </tr>
+            </table>
+          </div>
 
-		<section id="reference-tables">
-			<section id="hiragana-tables">
-				<div class="kana-table-wrapper">
-					<table id="hiragana-table" class="kana-table">
-						<caption>Hiragana</caption>
-						<tr>
-							<td><span class="jap">ん</span><span class="eng">n</span></td>
-							<td><span class="jap">わ</span><span class="eng">wa</span></td>
-							<td><span class="jap">ら</span><span class="eng">ra</span></td>
-							<td><span class="jap">や</span><span class="eng">ya</span></td>
-							<td><span class="jap">ま</span><span class="eng">ma</span></td>
-							<td><span class="jap">は</span><span class="eng">ha</span></td>
-							<td><span class="jap">な</span><span class="eng">na</span></td>
-							<td><span class="jap">た</span><span class="eng">ta</span></td>
-							<td><span class="jap">さ</span><span class="eng">sa</span></td>
-							<td><span class="jap">か</span><span class="eng">ka</span></td>
-							<td><span class="jap">あ</span><span class="eng">a</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">り</span><span class="eng">ri</span></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">み</span><span class="eng">mi</span></td>
-							<td><span class="jap">ひ</span><span class="eng">hi</span></td>
-							<td><span class="jap">に</span><span class="eng">ni</span></td>
-							<td><span class="jap">ち</span><span class="eng">chi</span></td>
-							<td><span class="jap">し</span><span class="eng">shi</span></td>
-							<td><span class="jap">き</span><span class="eng">ki</span></td>
-							<td><span class="jap">い</span><span class="eng">i</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">る</span><span class="eng">ru</span></td>
-							<td><span class="jap">ゆ</span><span class="eng">yu</span></td>
-							<td><span class="jap">む</span><span class="eng">mu</span></td>
-							<td><span class="jap">ふ</span><span class="eng">fu</span></td>
-							<td><span class="jap">ぬ</span><span class="eng">nu</span></td>
-							<td><span class="jap">つ</span><span class="eng">tsu</span></td>
-							<td><span class="jap">す</span><span class="eng">su</span></td>
-							<td><span class="jap">く</span><span class="eng">ku</span></td>
-							<td><span class="jap">う</span><span class="eng">u</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">れ</span><span class="eng">re</span></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">め</span><span class="eng">me</span></td>
-							<td><span class="jap">へ</span><span class="eng">he</span></td>
-							<td><span class="jap">ね</span><span class="eng">ne</span></td>
-							<td><span class="jap">て</span><span class="eng">te</span></td>
-							<td><span class="jap">せ</span><span class="eng">se</span></td>
-							<td><span class="jap">け</span><span class="eng">ke</span></td>
-							<td><span class="jap">え</span><span class="eng">e</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td><span class="jap">を</span><span class="eng">wo</span></td>
-							<td><span class="jap">ろ</span><span class="eng">ro</span></td>
-							<td><span class="jap">よ</span><span class="eng">yo</span></td>
-							<td><span class="jap">も</span><span class="eng">mo</span></td>
-							<td><span class="jap">ほ</span><span class="eng">ho</span></td>
-							<td><span class="jap">の</span><span class="eng">no</span></td>
-							<td><span class="jap">と</span><span class="eng">to</span></td>
-							<td><span class="jap">そ</span><span class="eng">so</span></td>
-							<td><span class="jap">こ</span><span class="eng">ko</span></td>
-							<td><span class="jap">お</span><span class="eng">o</span></td>
-						</tr>
-					</table>
-				</div>
+          <div class="kana-table-wrapper">
+            <table id="youon-hiragana-table" class="kana-table">
+              <caption>
+                Youon Hiragana
+              </caption>
+              <tr>
+                <td>
+                  <span class="jap">りゃ</span><span class="eng">rya</span>
+                </td>
+                <td>
+                  <span class="jap">みゃ</span><span class="eng">mya</span>
+                </td>
+                <td>
+                  <span class="jap">ひゃ</span><span class="eng">hya</span>
+                </td>
+                <td>
+                  <span class="jap">にゃ</span><span class="eng">nya</span>
+                </td>
+                <td>
+                  <span class="jap">ちゃ</span><span class="eng">cha</span>
+                </td>
+                <td>
+                  <span class="jap">しゃ</span><span class="eng">sha</span>
+                </td>
+                <td>
+                  <span class="jap">きゃ</span><span class="eng">kya</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">りゅ</span><span class="eng">ryu</span>
+                </td>
+                <td>
+                  <span class="jap">みゅ</span><span class="eng">myu</span>
+                </td>
+                <td>
+                  <span class="jap">ひゅ</span><span class="eng">hyu</span>
+                </td>
+                <td>
+                  <span class="jap">にゅ</span><span class="eng">nyu</span>
+                </td>
+                <td>
+                  <span class="jap">ちゅ</span><span class="eng">chu</span>
+                </td>
+                <td>
+                  <span class="jap">しゅ</span><span class="eng">shu</span>
+                </td>
+                <td>
+                  <span class="jap">きゅ</span><span class="eng">kyu</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">りょ</span><span class="eng">ryo</span>
+                </td>
+                <td>
+                  <span class="jap">みょ</span><span class="eng">myo</span>
+                </td>
+                <td>
+                  <span class="jap">ひょ</span><span class="eng">hyo</span>
+                </td>
+                <td>
+                  <span class="jap">にょ</span><span class="eng">nyo</span>
+                </td>
+                <td>
+                  <span class="jap">ちょ</span><span class="eng">cho</span>
+                </td>
+                <td>
+                  <span class="jap">しょ</span><span class="eng">sho</span>
+                </td>
+                <td>
+                  <span class="jap">きょ</span><span class="eng">kyo</span>
+                </td>
+              </tr>
+            </table>
+          </div>
 
-				<div class="kana-table-wrapper">
-					<table id="voiced-hiragana-table" class="kana-table">
-						<caption>Voiced Hiragana</caption>
-						<tr>
-							<td><span class="jap">ぱ</span><span class="eng">pa</span></td>
-							<td><span class="jap">ば</span><span class="eng">ba</span></td>
-							<td><span class="jap">だ</span><span class="eng">da</span></td>
-							<td><span class="jap">ざ</span><span class="eng">za</span></td>
-							<td><span class="jap">が</span><span class="eng">ga</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ぴ</span><span class="eng">pi</span></td>
-							<td><span class="jap">び</span><span class="eng">bi</span></td>
-							<td><span class="jap">ぢ</span><span class="eng">ji</span></td>
-							<td><span class="jap">じ</span><span class="eng">ji</span></td>
-							<td><span class="jap">ぎ</span><span class="eng">gi</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ぷ</span><span class="eng">pu</span></td>
-							<td><span class="jap">ぶ</span><span class="eng">bu</span></td>
-							<td><span class="jap">づ</span><span class="eng">zu</span></td>
-							<td><span class="jap">ず</span><span class="eng">zu</span></td>
-							<td><span class="jap">ぐ</span><span class="eng">gu</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ぺ</span><span class="eng">pe</span></td>
-							<td><span class="jap">べ</span><span class="eng">be</span></td>
-							<td><span class="jap">で</span><span class="eng">de</span></td>
-							<td><span class="jap">ぜ</span><span class="eng">ze</span></td>
-							<td><span class="jap">げ</span><span class="eng">ge</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ぽ</span><span class="eng">po</span></td>
-							<td><span class="jap">ぼ</span><span class="eng">bo</span></td>
-							<td><span class="jap">ど</span><span class="eng">do</span></td>
-							<td><span class="jap">ぞ</span><span class="eng">zo</span></td>
-							<td><span class="jap">ご</span><span class="eng">go</span></td>
-						</tr>
-					</table>
-				</div>
+          <div class="kana-table-wrapper">
+            <table id="voiced-youon-hiragana-table" class="kana-table">
+              <caption>
+                Voiced Youon Hiragana
+              </caption>
+              <tr>
+                <td>
+                  <span class="jap">ぴゃ</span><span class="eng">pya</span>
+                </td>
+                <td>
+                  <span class="jap">びゃ</span><span class="eng">bya</span>
+                </td>
+                <td>
+                  <span class="jap">じゃ</span><span class="eng">ja</span>
+                </td>
+                <td>
+                  <span class="jap">ぎゃ</span><span class="eng">gya</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">ぴゅ</span><span class="eng">pyu</span>
+                </td>
+                <td>
+                  <span class="jap">びゅ</span><span class="eng">byu</span>
+                </td>
+                <td>
+                  <span class="jap">じゅ</span><span class="eng">ju</span>
+                </td>
+                <td>
+                  <span class="jap">ぎゅ</span><span class="eng">gyu</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">ぴょ</span><span class="eng">pyo</span>
+                </td>
+                <td>
+                  <span class="jap">びょ</span><span class="eng">byo</span>
+                </td>
+                <td>
+                  <span class="jap">じょ</span><span class="eng">jo</span>
+                </td>
+                <td>
+                  <span class="jap">ぎょ</span><span class="eng">gyo</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
 
-				<div class="kana-table-wrapper">
-					<table id="youon-hiragana-table" class="kana-table">
-						<caption>Youon Hiragana</caption>
-						<tr>
-							<td><span class="jap">りゃ</span><span class="eng">rya</span></td>
-							<td><span class="jap">みゃ</span><span class="eng">mya</span></td>
-							<td><span class="jap">ひゃ</span><span class="eng">hya</span></td>
-							<td><span class="jap">にゃ</span><span class="eng">nya</span></td>
-							<td><span class="jap">ちゃ</span><span class="eng">cha</span></td>
-							<td><span class="jap">しゃ</span><span class="eng">sha</span></td>
-							<td><span class="jap">きゃ</span><span class="eng">kya</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">りゅ</span><span class="eng">ryu</span></td>
-							<td><span class="jap">みゅ</span><span class="eng">myu</span></td>
-							<td><span class="jap">ひゅ</span><span class="eng">hyu</span></td>
-							<td><span class="jap">にゅ</span><span class="eng">nyu</span></td>
-							<td><span class="jap">ちゅ</span><span class="eng">chu</span></td>
-							<td><span class="jap">しゅ</span><span class="eng">shu</span></td>
-							<td><span class="jap">きゅ</span><span class="eng">kyu</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">りょ</span><span class="eng">ryo</span></td>
-							<td><span class="jap">みょ</span><span class="eng">myo</span></td>
-							<td><span class="jap">ひょ</span><span class="eng">hyo</span></td>
-							<td><span class="jap">にょ</span><span class="eng">nyo</span></td>
-							<td><span class="jap">ちょ</span><span class="eng">cho</span></td>
-							<td><span class="jap">しょ</span><span class="eng">sho</span></td>
-							<td><span class="jap">きょ</span><span class="eng">kyo</span></td>
-						</tr>
-					</table>
-				</div>
+        <section id="katakana-tables">
+          <div class="kana-table-wrapper">
+            <table id="katakana-table" class="kana-table">
+              <caption>
+                Katakana
+              </caption>
+              <tr>
+                <td><span class="jap">ン</span><span class="eng">n</span></td>
+                <td><span class="jap">ワ</span><span class="eng">wa</span></td>
+                <td><span class="jap">ラ</span><span class="eng">ra</span></td>
+                <td><span class="jap">ヤ</span><span class="eng">ya</span></td>
+                <td><span class="jap">マ</span><span class="eng">ma</span></td>
+                <td><span class="jap">ハ</span><span class="eng">ha</span></td>
+                <td><span class="jap">ナ</span><span class="eng">na</span></td>
+                <td><span class="jap">タ</span><span class="eng">ta</span></td>
+                <td><span class="jap">サ</span><span class="eng">sa</span></td>
+                <td><span class="jap">カ</span><span class="eng">ka</span></td>
+                <td><span class="jap">ア</span><span class="eng">a</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">リ</span><span class="eng">ri</span></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">ミ</span><span class="eng">mi</span></td>
+                <td><span class="jap">ヒ</span><span class="eng">hi</span></td>
+                <td><span class="jap">ニ</span><span class="eng">ni</span></td>
+                <td><span class="jap">チ</span><span class="eng">chi</span></td>
+                <td><span class="jap">シ</span><span class="eng">shi</span></td>
+                <td><span class="jap">キ</span><span class="eng">ki</span></td>
+                <td><span class="jap">イ</span><span class="eng">i</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">ル</span><span class="eng">ru</span></td>
+                <td><span class="jap">ユ</span><span class="eng">yu</span></td>
+                <td><span class="jap">ム</span><span class="eng">mu</span></td>
+                <td><span class="jap">フ</span><span class="eng">fu</span></td>
+                <td><span class="jap">ヌ</span><span class="eng">nu</span></td>
+                <td><span class="jap">ツ</span><span class="eng">tsu</span></td>
+                <td><span class="jap">ス</span><span class="eng">su</span></td>
+                <td><span class="jap">ク</span><span class="eng">ku</span></td>
+                <td><span class="jap">ウ</span><span class="eng">u</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">レ</span><span class="eng">re</span></td>
+                <td class="empty-cell"></td>
+                <td><span class="jap">メ</span><span class="eng">me</span></td>
+                <td><span class="jap">ヘ</span><span class="eng">he</span></td>
+                <td><span class="jap">ネ</span><span class="eng">ne</span></td>
+                <td><span class="jap">テ</span><span class="eng">te</span></td>
+                <td><span class="jap">セ</span><span class="eng">se</span></td>
+                <td><span class="jap">ケ</span><span class="eng">ke</span></td>
+                <td><span class="jap">エ</span><span class="eng">e</span></td>
+              </tr>
+              <tr>
+                <td class="empty-cell"></td>
+                <td><span class="jap">ヲ</span><span class="eng">wo</span></td>
+                <td><span class="jap">ロ</span><span class="eng">ro</span></td>
+                <td><span class="jap">ヨ</span><span class="eng">yo</span></td>
+                <td><span class="jap">モ</span><span class="eng">mo</span></td>
+                <td><span class="jap">ホ</span><span class="eng">ho</span></td>
+                <td><span class="jap">ノ</span><span class="eng">no</span></td>
+                <td><span class="jap">ト</span><span class="eng">to</span></td>
+                <td><span class="jap">ソ</span><span class="eng">so</span></td>
+                <td><span class="jap">コ</span><span class="eng">ko</span></td>
+                <td><span class="jap">オ</span><span class="eng">o</span></td>
+              </tr>
+            </table>
+          </div>
 
-				<div class="kana-table-wrapper">
-					<table id="voiced-youon-hiragana-table" class="kana-table">
-						<caption>Voiced Youon Hiragana</caption>
-						<tr>
-							<td><span class="jap">ぴゃ</span><span class="eng">pya</span></td>
-							<td><span class="jap">びゃ</span><span class="eng">bya</span></td>
-							<td><span class="jap">じゃ</span><span class="eng">ja</span></td>
-							<td><span class="jap">ぎゃ</span><span class="eng">gya</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ぴゅ</span><span class="eng">pyu</span></td>
-							<td><span class="jap">びゅ</span><span class="eng">byu</span></td>
-							<td><span class="jap">じゅ</span><span class="eng">ju</span></td>
-							<td><span class="jap">ぎゅ</span><span class="eng">gyu</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ぴょ</span><span class="eng">pyo</span></td>
-							<td><span class="jap">びょ</span><span class="eng">byo</span></td>
-							<td><span class="jap">じょ</span><span class="eng">jo</span></td>
-							<td><span class="jap">ぎょ</span><span class="eng">gyo</span></td>
-						</tr>
-					</table>
-				</div>
-			</section>
+          <div class="kana-table-wrapper">
+            <table id="voiced-katakana-table" class="kana-table">
+              <caption>
+                Voiced Katakana
+              </caption>
+              <tr>
+                <td><span class="jap">パ</span><span class="eng">pa</span></td>
+                <td><span class="jap">バ</span><span class="eng">ba</span></td>
+                <td><span class="jap">ダ</span><span class="eng">da</span></td>
+                <td><span class="jap">ザ</span><span class="eng">za</span></td>
+                <td><span class="jap">ガ</span><span class="eng">ga</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">ピ</span><span class="eng">pi</span></td>
+                <td><span class="jap">ビ</span><span class="eng">bi</span></td>
+                <td><span class="jap">ヂ</span><span class="eng">ji</span></td>
+                <td><span class="jap">ジ</span><span class="eng">ji</span></td>
+                <td><span class="jap">ギ</span><span class="eng">gi</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">プ</span><span class="eng">pu</span></td>
+                <td><span class="jap">ブ</span><span class="eng">bu</span></td>
+                <td><span class="jap">ヅ</span><span class="eng">zu</span></td>
+                <td><span class="jap">ズ</span><span class="eng">zu</span></td>
+                <td><span class="jap">グ</span><span class="eng">gu</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">ペ</span><span class="eng">pe</span></td>
+                <td><span class="jap">ベ</span><span class="eng">be</span></td>
+                <td><span class="jap">デ</span><span class="eng">de</span></td>
+                <td><span class="jap">ゼ</span><span class="eng">ze</span></td>
+                <td><span class="jap">ゲ</span><span class="eng">ge</span></td>
+              </tr>
+              <tr>
+                <td><span class="jap">ポ</span><span class="eng">po</span></td>
+                <td><span class="jap">ボ</span><span class="eng">bo</span></td>
+                <td><span class="jap">ド</span><span class="eng">do</span></td>
+                <td><span class="jap">ゾ</span><span class="eng">zo</span></td>
+                <td><span class="jap">ゴ</span><span class="eng">go</span></td>
+              </tr>
+            </table>
+          </div>
 
-			<section id = "katakana-tables">
-				<div class="kana-table-wrapper">
-					<table id="katakana-table" class="kana-table">
-						<caption>Katakana</caption>
-						<tr>
-							<td><span class="jap">ン</span><span class="eng">n</span></td>
-							<td><span class="jap">ワ</span><span class="eng">wa</span></td>
-							<td><span class="jap">ラ</span><span class="eng">ra</span></td>
-							<td><span class="jap">ヤ</span><span class="eng">ya</span></td>
-							<td><span class="jap">マ</span><span class="eng">ma</span></td>
-							<td><span class="jap">ハ</span><span class="eng">ha</span></td>
-							<td><span class="jap">ナ</span><span class="eng">na</span></td>
-							<td><span class="jap">タ</span><span class="eng">ta</span></td>
-							<td><span class="jap">サ</span><span class="eng">sa</span></td>
-							<td><span class="jap">カ</span><span class="eng">ka</span></td>
-							<td><span class="jap">ア</span><span class="eng">a</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">リ</span><span class="eng">ri</span></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">ミ</span><span class="eng">mi</span></td>
-							<td><span class="jap">ヒ</span><span class="eng">hi</span></td>
-							<td><span class="jap">ニ</span><span class="eng">ni</span></td>
-							<td><span class="jap">チ</span><span class="eng">chi</span></td>
-							<td><span class="jap">シ</span><span class="eng">shi</span></td>
-							<td><span class="jap">キ</span><span class="eng">ki</span></td>
-							<td><span class="jap">イ</span><span class="eng">i</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">ル</span><span class="eng">ru</span></td>
-							<td><span class="jap">ユ</span><span class="eng">yu</span></td>
-							<td><span class="jap">ム</span><span class="eng">mu</span></td>
-							<td><span class="jap">フ</span><span class="eng">fu</span></td>
-							<td><span class="jap">ヌ</span><span class="eng">nu</span></td>
-							<td><span class="jap">ツ</span><span class="eng">tsu</span></td>
-							<td><span class="jap">ス</span><span class="eng">su</span></td>
-							<td><span class="jap">ク</span><span class="eng">ku</span></td>
-							<td><span class="jap">ウ</span><span class="eng">u</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">レ</span><span class="eng">re</span></td>
-							<td class="empty-cell"></td>
-							<td><span class="jap">メ</span><span class="eng">me</span></td>
-							<td><span class="jap">ヘ</span><span class="eng">he</span></td>
-							<td><span class="jap">ネ</span><span class="eng">ne</span></td>
-							<td><span class="jap">テ</span><span class="eng">te</span></td>
-							<td><span class="jap">セ</span><span class="eng">se</span></td>
-							<td><span class="jap">ケ</span><span class="eng">ke</span></td>
-							<td><span class="jap">エ</span><span class="eng">e</span></td>
-						</tr>
-						<tr>
-							<td class="empty-cell"></td>
-							<td><span class="jap">ヲ</span><span class="eng">wo</span></td>
-							<td><span class="jap">ロ</span><span class="eng">ro</span></td>
-							<td><span class="jap">ヨ</span><span class="eng">yo</span></td>
-							<td><span class="jap">モ</span><span class="eng">mo</span></td>
-							<td><span class="jap">ホ</span><span class="eng">ho</span></td>
-							<td><span class="jap">ノ</span><span class="eng">no</span></td>
-							<td><span class="jap">ト</span><span class="eng">to</span></td>
-							<td><span class="jap">ソ</span><span class="eng">so</span></td>
-							<td><span class="jap">コ</span><span class="eng">ko</span></td>
-							<td><span class="jap">オ</span><span class="eng">o</span></td>
-						</tr>
-					</table>
-				</div>
-			
-				<div class="kana-table-wrapper">
-					<table id="voiced-katakana-table" class="kana-table">
-						<caption>Voiced Katakana</caption>
-						<tr>
-							<td><span class="jap">パ</span><span class="eng">pa</span></td>
-							<td><span class="jap">バ</span><span class="eng">ba</span></td>
-							<td><span class="jap">ダ</span><span class="eng">da</span></td>
-							<td><span class="jap">ザ</span><span class="eng">za</span></td>
-							<td><span class="jap">ガ</span><span class="eng">ga</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ピ</span><span class="eng">pi</span></td>
-							<td><span class="jap">ビ</span><span class="eng">bi</span></td>
-							<td><span class="jap">ヂ</span><span class="eng">ji</span></td>
-							<td><span class="jap">ジ</span><span class="eng">ji</span></td>
-							<td><span class="jap">ギ</span><span class="eng">gi</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">プ</span><span class="eng">pu</span></td>
-							<td><span class="jap">ブ</span><span class="eng">bu</span></td>
-							<td><span class="jap">ヅ</span><span class="eng">zu</span></td>
-							<td><span class="jap">ズ</span><span class="eng">zu</span></td>
-							<td><span class="jap">グ</span><span class="eng">gu</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ペ</span><span class="eng">pe</span></td>
-							<td><span class="jap">ベ</span><span class="eng">be</span></td>
-							<td><span class="jap">デ</span><span class="eng">de</span></td>
-							<td><span class="jap">ゼ</span><span class="eng">ze</span></td>
-							<td><span class="jap">ゲ</span><span class="eng">ge</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ポ</span><span class="eng">po</span></td>
-							<td><span class="jap">ボ</span><span class="eng">bo</span></td>
-							<td><span class="jap">ド</span><span class="eng">do</span></td>
-							<td><span class="jap">ゾ</span><span class="eng">zo</span></td>
-							<td><span class="jap">ゴ</span><span class="eng">go</span></td>
-						</tr>
-					</table>
-				</div>
-				
-				<div class="kana-table-wrapper">
-					<table id="youon-katakana-table" class="kana-table">
-						<caption>Youon Katakana</caption>
-						<tr>
-							<td><span class="jap">リャ</span><span class="eng">rya</span></td>
-							<td><span class="jap">ミャ</span><span class="eng">mya</span></td>
-							<td><span class="jap">ヒャ</span><span class="eng">hya</span></td>
-							<td><span class="jap">ニャ</span><span class="eng">nya</span></td>
-							<td><span class="jap">チャ</span><span class="eng">cha</span></td>
-							<td><span class="jap">シャ</span><span class="eng">sha</span></td>
-							<td><span class="jap">キャ</span><span class="eng">kya</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">リュ</span><span class="eng">ryu</span></td>
-							<td><span class="jap">ミュ</span><span class="eng">myu</span></td>
-							<td><span class="jap">ヒュ</span><span class="eng">hyu</span></td>
-							<td><span class="jap">ニュ</span><span class="eng">nyu</span></td>
-							<td><span class="jap">チュ</span><span class="eng">chu</span></td>
-							<td><span class="jap">シュ</span><span class="eng">shu</span></td>
-							<td><span class="jap">キュ</span><span class="eng">kyu</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">リョ</span><span class="eng">ryo</span></td>
-							<td><span class="jap">ミョ</span><span class="eng">myo</span></td>
-							<td><span class="jap">ヒョ</span><span class="eng">hyo</span></td>
-							<td><span class="jap">ニョ</span><span class="eng">nyo</span></td>
-							<td><span class="jap">チョ</span><span class="eng">cho</span></td>
-							<td><span class="jap">ショ</span><span class="eng">sho</span></td>
-							<td><span class="jap">キョ</span><span class="eng">kyo</span></td>
-						</tr>
-					</table>
-				</div>
+          <div class="kana-table-wrapper">
+            <table id="youon-katakana-table" class="kana-table">
+              <caption>
+                Youon Katakana
+              </caption>
+              <tr>
+                <td>
+                  <span class="jap">リャ</span><span class="eng">rya</span>
+                </td>
+                <td>
+                  <span class="jap">ミャ</span><span class="eng">mya</span>
+                </td>
+                <td>
+                  <span class="jap">ヒャ</span><span class="eng">hya</span>
+                </td>
+                <td>
+                  <span class="jap">ニャ</span><span class="eng">nya</span>
+                </td>
+                <td>
+                  <span class="jap">チャ</span><span class="eng">cha</span>
+                </td>
+                <td>
+                  <span class="jap">シャ</span><span class="eng">sha</span>
+                </td>
+                <td>
+                  <span class="jap">キャ</span><span class="eng">kya</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">リュ</span><span class="eng">ryu</span>
+                </td>
+                <td>
+                  <span class="jap">ミュ</span><span class="eng">myu</span>
+                </td>
+                <td>
+                  <span class="jap">ヒュ</span><span class="eng">hyu</span>
+                </td>
+                <td>
+                  <span class="jap">ニュ</span><span class="eng">nyu</span>
+                </td>
+                <td>
+                  <span class="jap">チュ</span><span class="eng">chu</span>
+                </td>
+                <td>
+                  <span class="jap">シュ</span><span class="eng">shu</span>
+                </td>
+                <td>
+                  <span class="jap">キュ</span><span class="eng">kyu</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">リョ</span><span class="eng">ryo</span>
+                </td>
+                <td>
+                  <span class="jap">ミョ</span><span class="eng">myo</span>
+                </td>
+                <td>
+                  <span class="jap">ヒョ</span><span class="eng">hyo</span>
+                </td>
+                <td>
+                  <span class="jap">ニョ</span><span class="eng">nyo</span>
+                </td>
+                <td>
+                  <span class="jap">チョ</span><span class="eng">cho</span>
+                </td>
+                <td>
+                  <span class="jap">ショ</span><span class="eng">sho</span>
+                </td>
+                <td>
+                  <span class="jap">キョ</span><span class="eng">kyo</span>
+                </td>
+              </tr>
+            </table>
+          </div>
 
-				<div class="kana-table-wrapper">
-					<table id="voiced-youon-katakana-table" class="kana-table">
-						<caption>Voiced Youon Hiragana</caption>
-						<tr>
-							<td><span class="jap">ピャ</span><span class="eng">pya</span></td>
-							<td><span class="jap">ビャ</span><span class="eng">bya</span></td>
-							<td><span class="jap">ジャ</span><span class="eng">ja</span></td>
-							<td><span class="jap">ギャ</span><span class="eng">gya</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ピュ</span><span class="eng">pyu</span></td>
-							<td><span class="jap">ビュ</span><span class="eng">byu</span></td>
-							<td><span class="jap">ジュ</span><span class="eng">ju</span></td>
-							<td><span class="jap">ギュ</span><span class="eng">gyu</span></td>
-						</tr>
-						<tr>
-							<td><span class="jap">ピョ</span><span class="eng">pyo</span></td>
-							<td><span class="jap">ビョ</span><span class="eng">byo</span></td>
-							<td><span class="jap">ジョ</span><span class="eng">jo</span></td>
-							<td><span class="jap">ギョ</span><span class="eng">gyo</span></td>
-						</tr>
-					</table>
-				</div>
+          <div class="kana-table-wrapper">
+            <table id="voiced-youon-katakana-table" class="kana-table">
+              <caption>
+                Voiced Youon Hiragana
+              </caption>
+              <tr>
+                <td>
+                  <span class="jap">ピャ</span><span class="eng">pya</span>
+                </td>
+                <td>
+                  <span class="jap">ビャ</span><span class="eng">bya</span>
+                </td>
+                <td>
+                  <span class="jap">ジャ</span><span class="eng">ja</span>
+                </td>
+                <td>
+                  <span class="jap">ギャ</span><span class="eng">gya</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">ピュ</span><span class="eng">pyu</span>
+                </td>
+                <td>
+                  <span class="jap">ビュ</span><span class="eng">byu</span>
+                </td>
+                <td>
+                  <span class="jap">ジュ</span><span class="eng">ju</span>
+                </td>
+                <td>
+                  <span class="jap">ギュ</span><span class="eng">gyu</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="jap">ピョ</span><span class="eng">pyo</span>
+                </td>
+                <td>
+                  <span class="jap">ビョ</span><span class="eng">byo</span>
+                </td>
+                <td>
+                  <span class="jap">ジョ</span><span class="eng">jo</span>
+                </td>
+                <td>
+                  <span class="jap">ギョ</span><span class="eng">gyo</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+      </section>
+    </div>
 
-			</section>
-		</section>
-
-
-		
-		</div>
-		
-
-		<script src="scripts/kanatab.js"></script>
-
-	</body>
+    <script src="scripts/kanatab.js"></script>
+  </body>
 </html>

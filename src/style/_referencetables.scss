@@ -1,38 +1,39 @@
 .kana-table {
-    display: none;
+  display: none;
 
-    td {
-        padding: 0.25em;
-        width: 2em;
-        height: 2em;
-        border: 1px solid grey;
+  td {
+    padding: 0.25em;
+    width: 2em;
+    height: 2em;
+    border: 1px solid grey;
 
-        &:hover {
-            transform: translateY(-4px);
-        }
-
-        span {
-            margin: 0.25em;
-            white-space: nowrap;
-        }
+    &:hover {
+      transform: translateY(-4px);
     }
+
+    span {
+      margin: 0.25em;
+      white-space: nowrap;
+    }
+  }
 }
 
 .empty-cell {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 #reference-tables {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-#hiragana-tables, #katakana-tables {
-    display: none;
+#hiragana-tables,
+#katakana-tables {
+  display: none;
 }
 
 .kana-table-wrapper {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }

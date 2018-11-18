@@ -9,8 +9,8 @@ export default {
     eng: "#ffffff",
     caption: "#ffffff"
   },
-	mode: "flash-card",
-	kanaType: "hiragana",
-	voiced: false,
-	youon: false
+  mode: "flash-card",
+  kanaType: "hiragana",
+  voiced: false,
+  youon: false
 };

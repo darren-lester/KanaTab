@@ -1,8 +1,8 @@
 "use strict";
 
 export class Kana {
-	constructor(japanese, english) {
-		this.japanese = japanese;
-		this.english = english;
-	}
+  constructor(japanese, english) {
+    this.japanese = japanese;
+    this.english = english;
+  }
 }

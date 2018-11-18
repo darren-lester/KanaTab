@@ -1,18 +1,21 @@
 $optionsMargin: 0.5em;
 
-select, label , fieldset{
-	display: block;
-	margin-bottom: $optionsMargin;
+select,
+label,
+fieldset {
+  display: block;
+  margin-bottom: $optionsMargin;
 }
 
-input[type="checkbox"], input[type="radio"]{
-	margin-right: $optionsMargin;
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: $optionsMargin;
 }
 
 span {
-	margin-left: $optionsMargin;
+  margin-left: $optionsMargin;
 }
 
 #custom-theme-colours {
-	display: none;
+  display: none;
 }
