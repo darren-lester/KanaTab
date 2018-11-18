@@ -1,4 +1,0 @@
-TODO:
-- ensure no flash of unstyled content
-- write mocha tests
-- pick suitable fonts
