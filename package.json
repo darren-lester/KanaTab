@@ -19,9 +19,11 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "~2.0.0",
     "jshint": "^2.9.2",
-    "mocha": "~3.0.2"
+    "mocha": "~3.0.2",
+    "prettier": "^1.15.2"
   },
   "scripts": {
+    "prettier": "prettier --write {src,test}/**/*.{html,scss,js}",
     "test": "mocha test/test.js"
   },
   "author": "Darren Lester <darren@darrenlester.com>",
