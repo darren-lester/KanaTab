@@ -1,5 +1,3 @@
-// Author: Darren Lester
-
 "use strict";
 
 export const theme = "default";

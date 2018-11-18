@@ -1,5 +1,3 @@
-// Author: Darren Lester
-
 "use strict";
 
 import {Kana} from "./kana";

@@ -1,5 +1,3 @@
-// Author: Darren Lester
-
 "use strict";
 
 import * as defaults from "./defaults";
