@@ -24,6 +24,6 @@
   "scripts": {
     "test": "mocha test/test.js"
   },
-  "author": "Darren Lester <dsslester@gmail.com>",
+  "author": "Darren Lester <darren@darrenlester.com>",
   "license": "MIT"
 }
