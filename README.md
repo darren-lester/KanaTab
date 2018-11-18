@@ -4,7 +4,7 @@ in new tabs.
 
 [Install KanaTab](https://chrome.google.com/webstore/detail/kana-tab/mpcdgnhoopfipjmfiadfofkkgeghfchn)
 
-# Development
+## Development
 KanaTab currently relies on gulp to be installed globally for development.
 
 ```
