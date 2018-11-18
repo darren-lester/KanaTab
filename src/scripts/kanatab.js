@@ -36,15 +36,6 @@ chrome.storage.onChanged.addListener(function(changes){
 		changes.hasOwnProperty("youon")) {
 		chrome.storage.sync.get(null, opts => displayContent(opts));
 	}
-
-	if (changes.hasOwnProperty("adverts")) {
-		if (changes.adverts.newValue) {
-			document.getElementById("kana-advert").style.display = "flex";
-		}
-		else {
-			document.getElementById("kana-advert").style.display = "none";
-		}
-	}
 });
 
 // display content
@@ -52,8 +43,7 @@ chrome.storage.sync.get({
 	mode: defaults.mode,
 	kanaType: defaults.kanaType, 
 	voiced: defaults.voiced,
-	youon: defaults.youon,
-	adverts: defaults.adverts
+	youon: defaults.youon
 }, init);
 
 function init(opts){

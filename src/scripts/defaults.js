@@ -19,5 +19,3 @@ export const kanaType = "hiragana";
 export const voiced = false;
 
 export const youon = false;
-
-export const adverts = true;
