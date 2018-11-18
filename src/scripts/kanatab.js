@@ -1,6 +1,6 @@
 "use strict";
 
-import * as defaults from "./defaults";
+import defaults from "./defaults";
 import {set as setTheme} from "./theme";
 import {displayContent} from "./display";
 

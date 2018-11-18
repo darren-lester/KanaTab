@@ -1,5 +1,5 @@
 "use strict";
-import * as defaults from "./defaults";
+import defaults from "./defaults";
 
 function saveOptions() {
 
