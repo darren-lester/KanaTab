@@ -5,10 +5,6 @@ import kanaLists from "./kanalists";
 let kanaList = null;
 let lastKana = "";
 
-global.setKanaList = function(options) {
-  kanaList = kanaLists.get(options);
-};
-
 //set callback for updating kanaList when changed in options
 chrome.storage.onChanged.addListener(function() {
   chrome.storage.sync.get(["kanaType", "voiced", "youon"], setKanaList);
@@ -19,14 +15,17 @@ function getRandomKana() {
   return kanaList[i];
 }
 
-global.getNextKana = function() {
-  let kana = getRandomKana();
+global.setKanaList = function(options) {
+  kanaList = kanaLists.get(options);
+};
 
-  while (kana === lastKana) {
+global.getNextKana = function() {
+  let kana;
+
+  do {
     kana = getRandomKana();
-  }
+  } while (kana === lastKana);
 
   lastKana = kana;
-
   return kana;
 };
