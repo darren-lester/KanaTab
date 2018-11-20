@@ -27,7 +27,7 @@
   },
   "scripts": {
     "prettier": "prettier --write {src,test}/**/*.{html,scss,js}",
-    "test": "jest test/test.js"
+    "test": "jest"
   },
   "author": "Darren Lester <darren@darrenlester.com>",
   "license": "MIT"
