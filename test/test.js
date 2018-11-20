@@ -1,42 +1,16 @@
-var defaults = require("../tmp/defaults.js");
+import { assert } from "chai";
 
-global.chrome = {
-  storage: {
-    sync: {
-      get: function(items, callback) {
-        items = {
-          kanaType: "all",
-          voiced: true,
-          youon: true
-        };
-        callback(items);
-      }
-    },
-    onChanged: {
-      addListener: function() {}
-    }
-  }
-};
+import defaults from "../src/scripts/defaults.js";
+import kanaLists from "../src/scripts/kanalists";
+import { getNextKana, setKanaList } from "../src/scripts/background.js";
 
-require("../tmp/background.js");
-var assert = require("chai").assert;
+setKanaList({
+  kanaType: "all",
+  voiced: true,
+  youon: true
+});
 
 describe("getNextKana", function() {
-  // kana return values
-
-  it("should not return undefined", function() {
-    for (var run = 0; run < 5000; ++run) {
-      assert.notEqual(getNextKana(), undefined);
-    }
-  });
-
-  it("should not return null", function() {
-    for (var run = 0; run < 5000; ++run) {
-      assert.notEqual(getNextKana(), null);
-    }
-  });
-
-  // consecutive calls
   it("should not return the same kana on consecutive calls", function() {
     var lastKana = {};
 
@@ -47,5 +21,3 @@ describe("getNextKana", function() {
     }
   });
 });
-
-describe("random kana distribution", function() {});

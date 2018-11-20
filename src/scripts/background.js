@@ -6,20 +6,22 @@ let kanaList = null;
 let lastKana = "";
 
 //set callback for updating kanaList when changed in options
-chrome.storage.onChanged.addListener(function() {
-  chrome.storage.sync.get(["kanaType", "voiced", "youon"], setKanaList);
-});
+if (global.chrome) {
+  chrome.storage.onChanged.addListener(function() {
+    chrome.storage.sync.get(["kanaType", "voiced", "youon"], setKanaList);
+  });
+}
 
 function getRandomKana() {
   const i = Math.floor(Math.random() * kanaList.length);
   return kanaList[i];
 }
 
-global.setKanaList = function(options) {
+export function setKanaList(options) {
   kanaList = kanaLists.get(options);
-};
+}
 
-global.getNextKana = function() {
+export function getNextKana() {
   let kana;
 
   do {
@@ -28,4 +30,7 @@ global.getNextKana = function() {
 
   lastKana = kana;
   return kana;
-};
+}
+
+global.setKanaList = setKanaList;
+global.getNextKana = getNextKana;

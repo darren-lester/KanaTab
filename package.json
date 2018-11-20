@@ -4,9 +4,12 @@
   "private": true,
   "description": "Chrome extension for learning Japanese kana in new tabs.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0"
+  },
   "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "~3.5.0",
     "del": "^2.2.1",
     "gulp": "~3.9.1",
@@ -18,13 +21,13 @@
     "gulp-mocha": "^3.0.1",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "~2.0.0",
+    "jest": "^23.6.0",
     "jshint": "^2.9.2",
-    "mocha": "~3.0.2",
     "prettier": "^1.15.2"
   },
   "scripts": {
     "prettier": "prettier --write {src,test}/**/*.{html,scss,js}",
-    "test": "mocha test/test.js"
+    "test": "jest test/test.js"
   },
   "author": "Darren Lester <darren@darrenlester.com>",
   "license": "MIT"
