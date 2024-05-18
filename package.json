@@ -4,12 +4,6 @@
   "private": true,
   "description": "Chrome extension for learning Japanese kana in new tabs.",
   "main": "index.js",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  },
-  "scripts": {
-    "test": "jest"
-  },
   "author": "Darren Lester <darren@darrenlester.com>",
   "license": "MIT"
 }
