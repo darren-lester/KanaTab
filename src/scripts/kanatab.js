@@ -1,8 +1,6 @@
-"use strict";
-
-import defaults from "./defaults";
-import { set as setTheme } from "./theme";
-import { displayContent } from "./display";
+import defaults from "./defaults.js";
+import { set as setTheme } from "./theme.js";
+import { displayContent } from "./display.js";
 
 // set theme
 chrome.storage.sync.get(
@@ -53,14 +51,10 @@ chrome.storage.sync.get(
 );
 
 function init(opts) {
-  const bg = chrome.extension.getBackgroundPage();
+  chrome.runtime.sendMessage({
+    action: "SET_KANA_LIST",
+    payload: opts
+  });
 
-  if (!bg.setKanaList) {
-    setTimeout(function() {
-      init(opts);
-    }, 0);
-  } else {
-    bg.setKanaList(opts);
-    displayContent(opts);
-  }
+  displayContent(opts);
 }

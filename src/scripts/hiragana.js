@@ -1,6 +1,4 @@
-"use strict";
-
-import { Kana } from "./kana";
+import { Kana } from "./kana.js";
 
 export const hiragana = [
   new Kana("あ", "a"),

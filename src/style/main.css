@@ -1,0 +1,80 @@
+.jap {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,
+    "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#card {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+
+  font-size: 10em;
+
+  > * {
+    transform: translateX(-50%);
+  }
+
+  display: none;
+}
+
+#item {
+  position: absolute;
+  font-size: 2em;
+  top: 25%;
+  left: 50%;
+}
+
+#translation {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+}
+
+#item,
+#translation {
+  white-space: nowrap;
+}
+
+.kana-table {
+  display: none;
+
+  td {
+    padding: 0.25em;
+    width: 2em;
+    height: 2em;
+    border: 1px solid grey;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    span {
+      margin: 0.25em;
+      white-space: nowrap;
+    }
+  }
+}
+
+.empty-cell {
+  visibility: hidden;
+}
+
+#reference-tables {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#hiragana-tables,
+#katakana-tables {
+  display: none;
+}
+
+.kana-table-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+body {
+  margin: 1em 0;
+}

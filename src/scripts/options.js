@@ -1,5 +1,4 @@
-"use strict";
-import defaults from "./defaults";
+import defaults from "./defaults.js";
 
 function saveOptions() {
   // get options from page

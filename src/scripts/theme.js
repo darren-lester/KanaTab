@@ -1,5 +1,4 @@
-"use strict";
-import defaults from "./defaults";
+import defaults from "./defaults.js";
 
 export function set(theme, customTheme) {
   if (theme === "custom") {

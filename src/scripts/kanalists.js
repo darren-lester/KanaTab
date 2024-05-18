@@ -1,13 +1,11 @@
-"use strict";
-
-import { hiragana } from "./hiragana";
-import { katakana } from "./katakana";
-import { voicedHiragana } from "./voicedhiragana";
-import { voicedKatakana } from "./voicedkatakana";
-import { youonHiragana } from "./youonhiragana";
-import { youonKatakana } from "./youonkatakana";
-import { voicedYouonHiragana } from "./voicedyouonhiragana";
-import { voicedYouonKatakana } from "./voicedyouonkatakana";
+import { hiragana } from "./hiragana.js";
+import { katakana } from "./katakana.js";
+import { voicedHiragana } from "./voicedhiragana.js";
+import { voicedKatakana } from "./voicedkatakana.js";
+import { youonHiragana } from "./youonhiragana.js";
+import { youonKatakana } from "./youonkatakana.js";
+import { voicedYouonHiragana } from "./voicedyouonhiragana.js";
+import { voicedYouonKatakana } from "./voicedyouonkatakana.js";
 
 const hiraganaSets = {
   basic: hiragana,

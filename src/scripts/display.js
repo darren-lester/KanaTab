@@ -1,5 +1,3 @@
-"use strict";
-
 export function displayContent(opts) {
   switch (opts.mode) {
     case "flash-card":
@@ -17,12 +15,15 @@ export function displayContent(opts) {
 }
 
 function displayFlashCard() {
-  const kana = chrome.extension.getBackgroundPage().getNextKana();
+  chrome.runtime.sendMessage({
+    action: 'GET_NEXT_KANA'
+  }, (kana) => {
+    document.getElementById("item").innerText = kana.japanese;
+    document.getElementById("translation").innerText = kana.english;
+  
+    document.getElementById("card").style.display = "block";
+  })
 
-  document.getElementById("item").innerText = kana.japanese;
-  document.getElementById("translation").innerText = kana.english;
-
-  document.getElementById("card").style.display = "block";
 }
 
 function displayReferenceTables(opts) {
